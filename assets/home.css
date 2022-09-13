@@ -1,0 +1,38 @@
+
+
+.users_sign-in{
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid rgb(96, 248, 218);
+    margin-right: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+}
+
+
+.admin_sign-in{
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid rgb(96, 248, 218);;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+}
+
+.ul {
+    list-style: none;
+    width: 40vw;
+}
+.li {
+    border-bottom: 2px solid rgb(96, 248, 218);
+    padding-bottom: 8px
+}
+
+.name{
+    color: brown;
+
+}
+.selected_by {
+    margin-right: 2rem;
+}

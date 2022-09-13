@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<body>
+    <a class="users_sign-in" href="/users/sign-in">users sign in</a>
+    <a class="admin_sign-in" href="/admin/sign-in">admin sign in</a>
+
+    <% if(user.email) {%>
+    <form id="form" action="/users/select" method="POST">
+        <input id="name" type="text" name="memberName" placeholder="member Name" required>
+        <input id="submit" type="submit" value="save">
+    </form>
+    <%}%>
+
+    <% if(admin.email) {%>
+    <ul class="ul">
+        <% for(m of members) {%>
+            
+            <li class="li">
+                <h2 class="name">Name: <%= m.name %></h2>
+                <small class="selected_by">selected by: <%= m.selectedBy %></small>
+                <small class="time">selected at: <%= m.createdAt.toDateString() %></small>
+            </li>
+            
+        <%}%>
+    </ul>
+    <%}%>
+</body>
+
+</html>
