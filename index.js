@@ -3,7 +3,7 @@ const db = require('./config/mongoose');
 const app = express();
 const User = require('./models/user');
 const Admin = require('./models/admin');
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 const path = require('path');
 
